@@ -1,0 +1,6 @@
+<h1><%= @message.title %></h1>
+<p><%= @message.body %></p>
+
+<%= form_tag "/messages/#{@message.id}", method: :delete do %>
+	<input type="submit" value="Delete Message">
+<% end %>

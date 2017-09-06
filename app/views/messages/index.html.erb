@@ -1,0 +1,11 @@
+<h1>All Messages:</h1>
+
+<% @messages.each do |message| %>
+	<div>
+		<h3><%= message.title %></h3>
+		<p><%= message.body %></p>
+	</div>
+	<%= form_tag "/messages/#{message.id}", method: :delete do %>
+		<input type="submit" value="Delete Message">
+	<% end %>
+<% end %>
